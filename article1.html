@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article 1 - Mon Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Portfolio de Alexandre Bole</div>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="burger-label">
+                    <span class="burger">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </span>
+                </label>
+                <ul class="nav-links">
+                    <li><a href="index.html#about">À propos</a></li>
+                    <li><a href="index.html#diplomas">Diplômes</a></li>
+                    <li><a href="index.html#articles">Articles</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+   
+    <section class="article-header">
+        <div class="container">
+          <h1>Refonte mobile de l'application YouDrive pour AXA</h1>
+          <p class="article-meta">Publié le 3 avril 2025</p>
+          <div class="article-tags">
+            <span class="tag tag-flutter">Flutter</span>
+            <span class="tag tag-kotlin">Kotlin</span>
+            <span class="tag tag-swift">Swift</span>
+          </div>
+        </div>
+      </section>
+      
+      <section class="article-content">
+        <div class="container">
+            <img src="/photos/mld_long.svg" alt="Logo My Lucky Day" class="article-main-image">
+          <img src="/photos/yd.svg" alt="YouDrive AXA" class="article-main-image">
+
+          
+          <div class="article-text">
+            <p>
+              Dans le cadre de ma 2<sup>e</sup> année de BUT Informatique à l'IUT Lyon 1 (site de Bourg-en-Bresse), j'ai effectué un stage de 12 semaines chez <strong>My Lucky Day</strong>, une entreprise lyonnaise spécialisée dans le développement d'applications mobiles. Ma mission principale : la refonte complète de l'application <strong>YouDrive</strong>, développée pour le compte de <strong>Direct Assurance / AXA</strong>.
+            </p>
+      
+            <h2>Objectif du projet</h2>
+            <p>
+              L'application YouDrive permet d’analyser le style de conduite des utilisateurs afin de leur proposer des réductions sur leur assurance automobile. Initialement développée en natif (Swift/Kotlin), l’application souffrait de problèmes de maintenance, de performance et de clarté du code. Notre objectif était donc de <strong>repartir de zéro</strong>, en utilisant <strong>Flutter</strong> pour unifier les versions Android et iOS.
+            </p>
+      
+            <h2>Travail réalisé</h2>
+            <p>
+              J’ai travaillé en binôme avec un autre stagiaire sous la supervision du lead dev. Voici quelques-unes de mes tâches :
+            </p>
+            <ul>
+              <li>Expansion de l’architecture MVVM/MVI avec <strong>Riverpod</strong></li>
+              <li>Développement des écrans principaux : score, trajets, économies, offres, boîtier connecté</li>
+              <li>Intégration de plusieurs SDK natifs via <code>MethodChannel</code></li>
+              <li>Affichage de cartes GPS avec marqueurs personnalisés</li>
+              <li>Gestion de la navigation via <strong>GoRouter</strong></li>
+            </ul>
+      
+            <h2>Défis techniques</h2>
+            <p>
+              Plusieurs aspects techniques m'ont poussé à progresser rapidement :
+            </p>
+            <ul>
+                <li>Coder les vues Flutter</li>
+              <li>Gérer la récupération et le traitement de données depuis des API tierces</li>
+              <li>Créer des sliders customisés en Flutter</li>
+              <li>Optimiser les performances de chargement et de mise en cache</li>
+              <li>Comprendre et corriger des problèmes liés aux permissions Android/iOS</li>
+            </ul>
+      
+            <h2>Résultats & apprentissages</h2>
+            <p>
+              Ce projet m’a permis de devenir <strong>opérationnel en Flutter</strong>, de comprendre les architectures modernes côté mobile, et de renforcer mes compétences en travail d’équipe. La qualité du travail a été saluée par le CTO, et l’application est désormais plus performante, plus maintenable, et bien mieux accueillie par les utilisateurs.
+            </p>
+      
+            <h2>Technos utilisées</h2>
+            <p>
+              Flutter (Dart), Kotlin, Swift, Firebase, Riverpod, GoRouter, Sourcetree, Bitbucket, ClickUp, Slack, SDK CMT & TexDrive.
+            </p>
+      
+            <div class="article-navigation">
+              <a href="index.html#articles" class="btn back-btn">← Retour aux articles</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-content">
+                <p>N'hésitez pas à me contacter pour toute question ou collaboration.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:alexandre.bole01@gmail.com">alexandre.bole01@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+33771707397">+33 7 71 70 73 97</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="www.linkedin.com/in/alexandre-bole" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
