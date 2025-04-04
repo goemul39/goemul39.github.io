@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Portfolio de Alexandre Bole</div>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="burger-label">
+                    <span class="burger">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </span>
+                </label>
+                <ul class="nav-links">
+                    <li><a href="index.html#about">À propos</a></li>
+                    <li><a href="index.html#diplomas">Diplômes</a></li>
+                    <li><a href="index.html#articles">Articles</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+        <h1>Salut, moi c'est Alexandre !</h1>
+        <p>Étudiant en informatique, j'aime créer des projets utiles, jolis et bien codés.🧑🏻‍💻</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="/photos/pp.jpg?height=300&width=300" alt="Photo de profil">
+                </div>
+                <div class="about-text">
+                      <p>Passionné par l'informatique depuis mes années collège, j'ai commencé avec Scratch avant de me plonger dans le développement plus sérieux au lycée avec la spécialité NSI. Cette passion m'a naturellement conduit vers un BUT Informatique que je termine aujourd'hui en alternance.</p>
+                    <p>J'ai pu travailler sur des projets concrets et variés, notamment en développement mobile avec Kotlin, Jetpack Compose et Flutter. Mon alternance chez My Lucky Day m'a permis de participer à la refonte d'applications professionnelles, de gérer des montées de version, et d'optimiser des interfaces et performances.</p>
+                    <p>Curieux, rigoureux et toujours motivé à apprendre, je m'investis pleinement dans les projets techniques et collaboratifs. Mon objectif à court terme : continuer à monter en compétences, notamment en gestion de projet, tout en consolidant mon expertise technique dans des environnements innovants.</p>
+
+                    <a href="cv.html" class="btn about-btn">Voir mon CV</a>
+                
+                    <div class="interests">
+                        <h3>Centres d'intérêt</h3>
+                        <div class="interests-icons">
+                            <div class="interest-item">
+                                <a href="#gallery-nature" class="interest-link">
+                                    <i class="fas fa-tree" title="Nature"></i>
+                                    <span>Nature</span>
+                                </a>
+                            </div>
+                            <div class="interest-item">
+                                <a href="#gallery-mountain" class="interest-link">
+                                    <i class="fas fa-mountain" title="Montagne"></i>
+                                    <span>Montagne</span>
+                                </a>
+                            </div>
+                            <div class="interest-item">
+                                <a href="#gallery-ski" class="interest-link">
+                                    <i class="fas fa-skiing" title="Ski"></i>
+                                    <span>Ski</span>
+                                </a>
+                            </div>
+                            <div class="interest-item">
+                                <a href="#gallery-football" class="interest-link">
+                                    <i class="fas fa-futbol" title="Football"></i>
+                                    <span>Football</span>
+                                </a>
+                            </div>
+                            <div class="interest-item">
+                                <a href="#gallery-gaming" class="interest-link">
+                                    <i class="fas fa-gamepad" title="Jeux vidéo"></i>
+                                    <span>Jeux vidéo</span>
+                                </a>
+                            </div>
+                            <div class="interest-item">
+                                <a href="#gallery-chess" class="interest-link">
+                                    <i class="fas fa-chess" title="Échecs"></i>
+                                    <span>Échecs</span>
+                                </a>
+                            </div>
+                            <div class="interest-item">
+                                <a href="#gallery-travel" class="interest-link">
+                                    <i class="fas fa-plane" title="Voyage"></i>
+                                    <span>Voyage</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeries modales pour chaque centre d'intérêt -->
+    <div id="gallery-nature" class="gallery-modal">
+        <div class="gallery-content">
+            <a href="#about" class="gallery-close">&times;</a>
+            <h3>Nature</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Nature+1" alt="Nature 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Nature+2" alt="Nature 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Nature+3" alt="Nature 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Nature+4" alt="Nature 4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery-mountain" class="gallery-modal">
+        <div class="gallery-content">
+            <a href="#about" class="gallery-close">&times;</a>
+            <h3>Montagne</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Montagne+1" alt="Montagne 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Montagne+2" alt="Montagne 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Montagne+3" alt="Montagne 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Montagne+4" alt="Montagne 4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery-ski" class="gallery-modal">
+        <div class="gallery-content">
+            <a href="#about" class="gallery-close">&times;</a>
+            <h3>Ski</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Ski+1" alt="Ski 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Ski+2" alt="Ski 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Ski+3" alt="Ski 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Ski+4" alt="Ski 4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery-football" class="gallery-modal">
+        <div class="gallery-content">
+            <a href="#about" class="gallery-close">&times;</a>
+            <h3>Football</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Football+1" alt="Football 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Football+2" alt="Football 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Football+3" alt="Football 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Football+4" alt="Football 4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery-gaming" class="gallery-modal">
+        <div class="gallery-content">
+            <a href="#about" class="gallery-close">&times;</a>
+            <h3>Jeux vidéo</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Jeux+vidéo+1" alt="Jeux vidéo 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Jeux+vidéo+2" alt="Jeux vidéo 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Jeux+vidéo+3" alt="Jeux vidéo 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Jeux+vidéo+4" alt="Jeux vidéo 4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery-chess" class="gallery-modal">
+        <div class="gallery-content">
+            <a href="#about" class="gallery-close">&times;</a>
+            <h3>Échecs</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Échecs+1" alt="Échecs 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Échecs+2" alt="Échecs 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Échecs+3" alt="Échecs 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Échecs+4" alt="Échecs 4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery-travel" class="gallery-modal">
+        <div class="gallery-content">
+            <a href="#about" class="gallery-close">&times;</a>
+            <h3>Voyage</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Voyage+1" alt="Voyage 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Voyage+2" alt="Voyage 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Voyage+3" alt="Voyage 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="/placeholder.svg?height=300&width=400&text=Voyage+4" alt="Voyage 4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="diplomas" class="diplomas">
+        <div class="container">
+            <h2>Mes Diplômes</h2>
+            <div class="diplomas-container">
+                <div class="diploma-card">
+                    <div class="diploma-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="diploma-content">
+                        <h3>Baccalauréat Général</h3>
+                        <div class="diploma-school">
+                            <i class="fas fa-school"></i>
+                            <span>Lycée Polyvalent Arbez Carme, Oyonnax</span>
+                        </div>
+                        <p class="diploma-year">2022</p>
+                        <p>Mention Assez Bien</p>
+                        <p>Spécialités : NSI (Numérique et Sciences Informatiques) et Mathématiques</p>
+                    </div>
+                </div>
+                
+                <div class="diploma-card">
+                    <div class="diploma-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="diploma-content">
+                        <h3>BUT Informatique</h3>
+                        <div class="diploma-school">
+                            <i class="fas fa-building-columns"></i>
+                            <span>IUT Lyon 1 site de Bourg-en-Bresse</span>
+                        </div>
+                        <p class="diploma-year">2022 - 2025</p>
+                        <p>Bachelor Universitaire de Technologie</p>
+                        <p>Formation en cours de finalisation</p>
+                        
+                    </div>
+                </div>
+                
+                <div class="diploma-card">
+                    <div class="diploma-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="diploma-content">
+                        <h3>TOEIC</h3>
+                        <p class="diploma-year">2025</p>
+                        <p>Score : 925/990</p>
+                        <p>Niveau C1 - Avancé</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="articles" class="articles">
+        <div class="container">
+            <h2>Mes Réalisations informatiques</h2>
+            <div class="articles-grid">
+                <div class="article-card">
+                    <div class="article-image">
+                        <img src="/photos/article1/yd.svg?height=200&width=300" alt="Article 1" >
+                    </div>
+                    <div class="article-content">
+                        <h3>Refonte de l'application YouDrive</h3>
+                        <div class="article-tags">
+                            <span class="tag tag-flutter">Flutter</span>
+                            <span class="tag tag-kotlin">Kotlin</span>
+                            <span class="tag tag-swift">Swift</span>
+                        </div>
+                        <p>Refonte complète d'une application mobile d’assurance auto pour AXA avec Flutter. Intégration de SDK natifs, cartes GPS et architecture moderne pour améliorer les performances et la maintenabilité.</p>
+                        <a href="articles/article1.html" class="btn">Lire plus</a>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-image">
+                        <img src="/photos/article2/troover_long.png?height=200&width=300" alt="Article 2">
+                    </div>
+                    <div class="article-content">
+                        <h3>Refonte de l'application Troover</h3>
+                        <div class="article-tags">
+                            <span class="tag tag-flutter">Flutter</span>
+                            <span class="tag tag-ux">UI/UX</span>
+                            <span class="tag tag-team">Travail d'équipe</span>
+                        </div>
+                        <p>Développement Flutter d’une application pour la recherche de stages. Refonte UI/UX, architecture avec Riverpod & GoRouter, et ajout de composants interactifs pour une expérience moderne.</p>
+                        <a href="articles/article2.html" class="btn">Lire plus</a>
+                    </div>
+                </div>
+                
+                <div class="article-card">
+                    <div class="article-image">
+                        <img src="/photos/article3/sbmail.webp?height=200&width=300" alt="Article 3">
+                    </div>
+                    <div class="article-content">
+                        <h3>Boite aux lettres connecté</h3>
+                        <div class="article-tags">
+                            <span class="tag tag-flutter">Flutter</span>
+                            <span class="tag tag-firebase">Firebase</span>
+                            <span class="tag tag-iot">IoT</span>
+                            <span class="tag tag-esp">ESP32-CAM</span>
+                        </div>
+                        <p>Projet IoT avec ESP32-CAM et Flutter : détection de courrier, notifications en temps réel via Firebase, et ouverture de la boîte à distance via une serrure électromagnétique.</p>
+                        <a href="articles/article3.html" class="btn">Lire plus</a>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-image">
+                        <img src="/photos/article4/vgm.png?height=200&width=300" alt="Article 4">
+                    </div>
+                    <div class="article-content">
+                        <h3>Video Games Manager</h3>
+                        <div class="article-tags">
+                            <span class="tag tag-android">Jetpack Compose</span>
+                            <span class="tag tag-api">RAWG API</span>
+                            <span class="tag tag-firebase">Firebase</span>
+                            <span class="tag tag-room">Room DB</span>
+                        </div>
+                        <p>App Android Jetpack Compose pour gérer sa collection de jeux vidéo. Interface de type Netflix, recherche avec auto-complétion, Room local DB et Firebase Auth pour la connexion.</p>
+                        <a href="articles/article4.html" class="btn">Lire plus</a>
+                    </div>
+                </div>
+                
+                <div class="article-card coming-soon">
+                    <div class="article-image">
+                        <img src="/photos/article5/tpLogo.png?height=200&width=300" alt="Logo TeamPulse">
+                        <div class="coming-soon-overlay">
+                            <span>En cour de développement</span>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Maintenance applicative</h3>
+                        <div class="article-tags">
+                            <span class="tag tag-android">Jetpack Compose</span>
+                            <span class="tag tag-android">Android XML</span>
+                            <span class="tag tag-kotlin">Kotlin</span>
+                        </div>
+                        <p>Je contribue actuellement au développement de nouvelles fonctionnalités pour l'application TeamPulse, dans le cadre de mon alternance chez My Lucky Day.</p>
+                        <a href="#" class="btn disabled" onclick="return false;">En préparation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-content">
+                <p>N'hésitez pas à me contacter pour toute question ou collaboration.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:alexandre.bole01@gmail.com">alexandre.bole01@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+33771707397">+33 7 71 70 73 97</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="www.linkedin.com/in/alexandre-bole" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

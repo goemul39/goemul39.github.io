@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article 2 - Mon Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Portfolio de Alexandre Bole</div>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="burger-label">
+                    <span class="burger">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </span>
+                </label>
+                <ul class="nav-links">
+                    <li><a href="../index.html#about">À propos</a></li>
+                    <li><a href="../index.html#diplomas">Diplômes</a></li>
+                    <li><a href="../index.html#articles">Articles</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    <section class="article-header">
+        <div class="container">
+          <h1>Boite aux lettres connecté</h1>
+          <p class="article-meta">Publié le 3 avril 2025 | Projet universitaire (SAE S5 – BUT Informatique)</p>
+          <div class="article-tags">
+            <span class="tag tag-flutter">Flutter</span>
+            <span class="tag tag-ux">UI/UX</span>
+            <span class="tag tag-team">Travail d'équipe</span>
+          </div>
+        </div>
+      </section>
+      
+      <section class="article-content">
+        <div class="container">
+          <img src="/photos/article2/iut.png" alt="IUT Lyon 1" class="article-main-image">
+          <img src="/photos/article2/troover_long.png" alt="Aperçu Troover" class="article-main-image">
+          
+          <div class="article-text">
+            <p>
+              Dans le cadre de notre cinquième semestre de BUT Informatique, j’ai participé au projet <strong>Troover</strong>, une application mobile destinée à <strong>faciliter la mise en relation entre étudiants et entreprises</strong> pour les stages et alternances. Ce projet s’inscrit dans une démarche de continuité, en reprenant un code existant à améliorer, corriger et compléter.
+            </p>
+      
+            <h2>Mon rôle dans le projet</h2>
+            <p>
+              Faisant partie du <strong>groupe mobile</strong>, j’ai collaboré avec un autre étudiant pour repenser l’application mobile en Flutter. Mon implication a porté sur :
+            </p>
+            <ul>
+              <li>La refonte complète de l’<strong>interface utilisateur</strong> à partir de nouvelles maquettes Figma</li>
+              <li>L’ajout de composants interactifs comme une barre de chat, un SplashScreen animé et un système de swipe inspiré de Tinder</li>
+              <li>La mise en place d’une <strong>architecture optimisée</strong> avec <code>Riverpod</code> et <code>GoRouter</code></li>
+              <li>L’intégration de <strong>Slang</strong> pour anticiper la traduction de l’application</li>
+            </ul>
+
+            <h2>Aperçu de l'application mobile</h2>
+            <p>Voici quelques captures d’écran illustrant le design et les fonctionnalités de l’application Troover :</p>
+
+            <div class="gallery">
+            <img src="/photos/article2/screen1.png" alt="SplashScreen">    
+            <img src="/photos/article2/screen2.png" alt="Page d'acceuil">
+            <img src="/photos/article2/screen3.png" alt="Chat">
+            <img src="/photos/article2/screen4.png" alt="Page de profil">
+            </div>
+      
+            <h2>Défis et solutions</h2>
+            <p>
+              L’un des plus gros défis a été l’état du back-end existant, souvent instable ou incomplet. Cela nous a contraints à <strong>avancer en autonomie</strong> sur la partie front, en simulant certaines données et en préparant l’intégration future.
+            </p>
+            <p>
+              Pour pallier ce manque, nous avons priorisé le <strong>design UI/UX</strong>, en travaillant sur la fluidité de la navigation, la lisibilité de l’interface et l’harmonisation des composants. J’ai notamment apprécié concevoir des <strong>animations visuelles</strong> qui enrichissent l’expérience utilisateur.
+            </p>
+      
+            <h2>Collaboration et gestion de projet</h2>
+            <p>
+              Le projet Troover était aussi une <strong>expérience d’équipe à grande échelle</strong>. Nous étions répartis entre le groupe Web et Mobile, ce qui a nécessité une bonne communication (Slack, Discord) et une coordination sur les maquettes, les données et l’architecture. J’ai pris conscience de l’importance de la documentation et des échanges réguliers pour éviter les malentendus techniques.
+            </p>
+      
+            <h2>Technologies utilisées</h2>
+            <p>
+              Flutter (Dart), Riverpod, GoRouter, Slang, GitHub, Figma, Slack, Discord.
+            </p>
+      
+            <h2>Résultat & apprentissages</h2>
+            <p>
+              Bien que l’application n’ait pas été finalisée à 100% (à cause d’un back-end encore en développement), nous avons pu livrer une base solide avec un design moderne et une structure maintenable. Ce projet m’a permis de <strong>consolider mes compétences Flutter</strong>, de comprendre les enjeux UI/UX et de mieux gérer les contraintes réelles d’un projet informatique.
+            </p>
+      
+            <div class="article-navigation">
+              <a href="../index.html#articles" class="btn back-btn">← Retour aux articles</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-content">
+                <p>N'hésitez pas à me contacter pour toute question ou collaboration.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:alexandre.bole01@gmail.com">alexandre.bole01@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+33771707397">+33 7 71 70 73 97</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="www.linkedin.com/in/alexandre-bole" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

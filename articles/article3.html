@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article 3 - Mon Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Portfolio de Alexandre Bole</div>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="burger-label">
+                    <span class="burger">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </span>
+                </label>
+                <ul class="nav-links">
+                    <li><a href="../index.html#about">À propos</a></li>
+                    <li><a href="../index.html#diplomas">Diplômes</a></li>
+                    <li><a href="../index.html#articles">Articles</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="article-header">
+        <div class="container">
+          <h1>SBMail – Boîte aux lettres connectée en temps réel</h1>
+          <p class="article-meta">Publié le 4 avril 2025 | Projet universitaire (BUT Informatique)</p>
+          <div class="article-tags">
+            <span class="tag tag-flutter">Flutter</span>
+            <span class="tag tag-firebase">Firebase</span>
+            <span class="tag tag-iot">IoT</span>
+            <span class="tag tag-esp">ESP32-CAM</span>
+          </div>
+        </div>
+      </section>
+      
+      <section class="article-content">
+        <div class="container">
+          <img src="../photos/article2/iut.png" alt="Logo IUT" class="article-main-image">
+          <img src="../photos/article3/sbmail.webp" alt="Logo SBMail" class="article-main-image">
+          
+          <div class="article-text">
+            <p>
+              En binôme, nous avons conçu <strong>SBMail</strong>, une boîte aux lettres connectée permettant de <strong>recevoir une notification avec photo à chaque nouvelle livraison</strong>. L’objectif : proposer une solution simple, sécurisée et accessible pour suivre son courrier en temps réel, où que l’on soit.
+            </p>
+      
+            <h2>Architecture du système</h2>
+            <p>
+              Le système repose sur une <strong>ESP32-CAM</strong> associée à un <strong>capteur infrarouge</strong> (IR). Lorsqu’un mouvement est détecté (insertion de courrier), l’ESP32-CAM capture une photo, l’envoie vers <strong>Firebase Storage</strong> et met à jour une base de données en temps réel.
+            </p>
+      
+            <p>
+              Côté mobile, une application Flutter permet aux utilisateurs de :
+            </p>
+            <ul>
+              <li>Se connecter via e-mail/mot de passe ou Google (Firebase Auth)</li>
+              <li>Recevoir des <strong>notifications en direct</strong> (Firebase Cloud Messaging)</li>
+              <li>Consulter l’<strong>historique des livraisons</strong></li>
+              <li>Gérer leurs boîtes aux lettres liées</li>
+              <li>Déverrouiller la boîte à distance</li>
+            </ul>
+
+            <h2>Association des boîtes aux lettres via QR code</h2>
+            <p>
+            Chaque boîte possède un <strong>QR code unique</strong> généré à partir de son identifiant. Lors de la première utilisation, l’utilisateur peut <strong>scanner ce QR code</strong> avec l’app mobile pour lier automatiquement la boîte à son compte. Cela évite toute saisie manuelle et garantit une liaison rapide et sécurisée entre l’utilisateur et son matériel.
+            </p>
+      
+            <h2>Connexion à Firebase</h2>
+            <p>
+              Le projet utilise de manière combinée plusieurs services Firebase :
+            </p>
+            <ul>
+              <li><strong>Realtime Database</strong> : permet d'associer les utilisateurs a leurs boites et détecte l'action de déverrouillage</li>
+              <li><strong>Storage</strong> : héberge les photos capturées</li>
+              <li><strong>Cloud Messaging</strong> : envoie la notification à l'utilisateur</li>
+              <li><strong>Authentication</strong> : gestion sécurisée des comptes (utilisateurs vs ESP anonyme)</li>
+            </ul>
+      
+            <h2>Serrure électromagnétique</h2>
+            <p>
+              Pour ouvrir la boîte, une <strong>serrure électromagnétique 12V</strong> (modèle S0837DL-B) est actionnée via un <strong>relais connecté</strong> à l’ESP32. L’ESP observe une variable dans la Realtime DB, et déclenche l’ouverture en conséquence.
+            </p>
+      
+            <img src="../photos/article3/serrure.png" alt="Serrure électromagnétique" class="article-main-image">
+      
+            <h2>Défis rencontrés</h2>
+            <p>
+            Le projet n’a pas été sans difficulté :
+            </p>
+            <ul>
+            <li>L’envoi de notifications demandait une configuration fine de FCM (jetons, topics...)</li>
+            <li>L’<strong>upload du code sur l’ESP32-CAM</strong> était particulièrement délicat. Sans le shield USB-série adapté, le flashage était instable ou échouait. Une fois le shield ajouté, la procédure s’est stabilisée</li>
+            <li>La gestion du timing pour la capture, l’upload de la photo vers Firebase Storage et la mise à jour en temps réel de la DB a nécessité plusieurs tests</li>
+            </ul>
+
+      
+            <h2>Résultat</h2>
+            <p>
+              SBMail est désormais <strong>fonctionnel et fiable</strong>. Chaque livraison est documentée et consultable depuis une interface simple, et la boîte peut être déverrouillée depuis n’importe où. Ce projet nous a permis de <strong>maîtriser l’écosystème Firebase</strong>, d’approfondir Flutter et d’expérimenter l’IoT en conditions réelles.
+            </p>
+      
+            <h2>Présentation du système en images</h2>
+            <p>Voici un aperçu de notre montage :</p>
+      
+            <div class="gallery">
+              <img src="../photos/article3/montage1.jpg" alt="Montage ESP et capteur IR">
+              <img src="../photos/article3/montage2.jpg" alt="Boîte fermée avec serrure">
+              <img src="../photos/article3/app_screenshot.jpg" alt="Vue de l'app SBMail">
+            </div>
+      
+            <div class="article-navigation">
+              <a href="../index.html#articles" class="btn back-btn">← Retour aux articles</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-content">
+                <p>N'hésitez pas à me contacter pour toute question ou collaboration.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:alexandre.bole01@gmail.com">alexandre.bole01@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+33771707397">+33 7 71 70 73 97</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="www.linkedin.com/in/alexandre-bole" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article 4 - Mon Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Portfolio de Alexandre Bole</div>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="burger-label">
+                    <span class="burger">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </span>
+                </label>
+                <ul class="nav-links">
+                    <li><a href="../index.html#about">À propos</a></li>
+                    <li><a href="../index.html#diplomas">Diplômes</a></li>
+                    <li><a href="../index.html#articles">Articles</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    <section class="article-header">
+      <div class="container">
+        <h1>VideoGamesManager – Une app mobile pour gérer sa ludothèque</h1>
+        <p class="article-meta">Publié le 4 avril 2025 | Projet universitaire (BUT 3 Informatique)</p>
+        <div class="article-tags">
+          <span class="tag tag-android">Jetpack Compose</span>
+          <span class="tag tag-api">RAWG API</span>
+          <span class="tag tag-firebase">Firebase</span>
+          <span class="tag tag-room">Room DB</span>
+        </div>
+      </div>
+    </section>
+    
+    <section class="article-content">
+      <div class="container">
+        <img src="../photos/article2/iut.png" alt="Logo IUT" class="article-main-image">
+        <img src="../photos/article4/vgm_long.png" alt="Logo SBMail" class="article-main-image">
+    
+        <div class="article-text">
+          <p>
+            En binôme, nous avons conçu <strong>VideoGamesManager</strong>, une application Android moderne qui permet aux utilisateurs de <strong>gérer leur collection de jeux vidéo</strong>. Elle permet de créer une <strong>wishlist</strong>, une liste de jeux possédés, et de découvrir des titres via une interface inspirée de Netflix.
+          </p>
+    
+          <h2>Fonctionnalités principales</h2>
+          <ul>
+            <li>Page d’accueil avec <strong>jeu en vedette</strong> (highlighted game) et carrousels par catégorie</li>
+            <li>Recherche par mots-clés avec <strong>SearchBar animée</strong> et affichage dynamique des résultats</li>
+            <li>Ajout de jeux à sa <strong>wishlist</strong> ou sa collection personnelle (<em>owned games</em>)</li>
+            <li>Page de profil personnalisée avec la possibilité de <strong>changer son nom</strong></li>
+            <li><strong>Connexion via Firebase Authentication</strong> (email/mot de passe + Google)</li>
+          </ul>
+          <div class="gallery">
+          <img src="../photos/article4/vgmHome.png" alt="Page d'acceuil" class="article-main-image">
+          <img src="../photos/article4/vgmSearch.png" alt="Recherche dans l'app" class="article-main-image">
+          </div>
+          <h2>Technologies utilisées</h2>
+          <p>
+            L’application est entièrement développée en <strong>Jetpack Compose</strong>, ce qui nous a permis de créer une UI fluide, moderne et responsive. Les données de jeux sont récupérées depuis l’<strong>API publique RAWG</strong>, et les jeux ajoutés par l’utilisateur sont enregistrés localement via <strong>Room</strong>, garantissant un accès rapide même hors-ligne.
+          </p>
+          <p>
+            Nous avons structuré l’application selon une <strong>architecture MVVM</strong> (Model - View - ViewModel), permettant une séparation claire des responsabilités et facilitant la maintenance et les tests. Les `ViewModel` exposent des `State` observables que les Composables réactifs affichent et mettent à jour dynamiquement.
+          </p>
+          <p>
+            Nous avons également intégré <strong>Firebase Auth</strong> pour l’identification des utilisateurs, avec une gestion des sessions et de la sécurité. Les jeux sont liés à l'utilisateur connecté, ce qui permet une personnalisation complète du profil.
+          </p>
+    
+          <div class="gallery">
+            <img src="../photos/article4/vgmProfile.png" alt="Profil utilisateur" class="article-main-image">
+          </div>
+    
+          <h2>Défis rencontrés</h2>
+          <p>
+            Nous avons travaillé sur la gestion des appels API avec pagination, sur l'intégration fluide de Room avec Compose, ainsi que sur la création d'une interface proprement animée et catégorisée. La recherche avec autocomplétion et résultats dynamiques a également représenté un vrai défi UX que nous avons relevé avec succès.
+          </p>
+    
+          <h2>Résultat & apprentissages</h2>
+          <p>
+            Ce projet nous a permis de maîtriser les dernières technologies Android (Compose, Navigation, ViewModel, State management) et de mieux comprendre la logique d’intégration entre données distantes (API) et données locales (Room). Il a aussi été un bon entraînement pour travailler la fluidité et l’expérience utilisateur.
+          </p>
+    
+          <div class="article-navigation">
+            <a href="../index.html#articles" class="btn back-btn">← Retour aux articles</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+      
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-content">
+                <p>N'hésitez pas à me contacter pour toute question ou collaboration.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:alexandre.bole01@gmail.com">alexandre.bole01@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+33771707397">+33 7 71 70 73 97</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="www.linkedin.com/in/alexandre-bole" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
