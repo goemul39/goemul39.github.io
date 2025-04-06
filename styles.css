@@ -295,10 +295,11 @@ nav {
   transition: var(--transition);
 }
 
-.interest-item:hover i {
+.interest-item:not(.disabled-interest):hover i {
   color: var(--secondary-color);
   transform: translateY(-5px);
 }
+
 
 .interest-item span {
   font-size: 0.9rem;
@@ -911,9 +912,24 @@ footer h2::after {
 .gallery-grid {
   column-count: 3;
   column-gap: 1.5rem;
+  orphans: 1;
+  widows: 1;
+}
+
+@media (max-width: 1024px) {
+  .gallery-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    column-count: 1;
+  }
 }
 
 .gallery-item {
+  display: block;
   break-inside: avoid;
   margin-bottom: 1.5rem;
 }
