@@ -310,84 +310,9 @@ nav {
   display: inline-block;
 }
 
-/* Styles pour les galeries modales */
-.gallery-modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--overlay-color);
-  z-index: 2000;
-  overflow-y: auto;
-  padding: 2rem 0;
-}
 
-.gallery-modal:target {
-  display: block;
-}
 
-.gallery-content {
-  background-color: white;
-  max-width: 90%;
-  width: 1000px;
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 10px;
-  position: relative;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
 
-.gallery-close {
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  font-size: 2rem;
-  color: var(--dark-color);
-  text-decoration: none;
-  line-height: 1;
-}
-
-.gallery-close:hover {
-  color: var(--secondary-color);
-}
-
-.gallery-content h3 {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: var(--primary-color);
-  font-size: 1.8rem;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.gallery-item {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: var(--transition);
-}
-
-.gallery-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  transition: var(--transition);
-}
-
-.gallery-item:hover img {
-  transform: scale(1.05);
-}
 
 /* Diplomas section */
 .diplomas {
@@ -932,3 +857,88 @@ footer h2::after {
   height: 100%;
   border: none;
 }
+.gallery-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-color);
+  z-index: 2000;
+  overflow-y: auto;
+  padding: 2rem 0;
+}
+
+.gallery-modal:target {
+  display: block;
+}
+
+.gallery-content {
+  display: flow-root; /* permet de contenir correctement la grid masonry */
+  background-color: white;
+  max-width: 90%;
+  width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: var(--dark-color);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.gallery-close:hover {
+  color: var(--secondary-color);
+}
+
+.gallery-content h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+}
+
+
+.gallery-grid {
+  column-count: 3;
+  column-gap: 1.5rem;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.disabled-interest .interest-link {
+  pointer-events: none; 
+  cursor: default; 
+}
+
+.disabled-interest:hover i {
+  transform: none; 
+  color: inherit;  
+}
+
+
