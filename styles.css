@@ -214,7 +214,7 @@ nav {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
   text-align: center;
-  padding: 10rem 0 5rem;
+  padding: 9rem 0 3rem;
   margin-top: 0;
 }
 
@@ -226,7 +226,7 @@ nav {
 
 .hero p {
   font-size: 1.2rem;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -239,6 +239,7 @@ nav {
 
 .about-image {
   flex: 1;
+  max-width: 300px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
